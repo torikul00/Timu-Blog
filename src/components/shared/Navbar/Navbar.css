@@ -1,44 +1,103 @@
-nav {
+:root {
+    --deepDark: #16161a;
+    --simpleDark: #27272b;
+    --orangeColor: #fd3a13;
+}
+
+nav {}
+
+.topbar-container {
     width: 100%;
-    background-color: antiquewhite;
+    height: 30px;
+    background-color: var(--deepDark);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 30px;
+    padding: 0px 80px;
+
+}
+
+.topbar-socials a {
+    color: white;
+    margin-left: 15px
+}
+
+.topbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 18px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.topbar-container a:hover {
+    color: #fd3a13;
+}
+
+
+
+.navbar-container {
+    width: 100%;
+    background-color: var(--simpleDark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+.logo {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .navlinks {
     display: flex;
-    
+    align-items: center;
+
 }
 
 .navlinks div {
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
 .dropdown-container {
     position: relative;
     display: inline-block;
-    padding: 30px 10px;
+    padding: 20px 0px;
 }
 
 .dropdown-container button {
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
+    color: white;
+    transition: 0.3s;
 
 }
-.btn-arrow{
+
+.dropdown-container button:hover {
+    color: var(--orangeColor);
+}
+
+
+
+.btn-arrow {
     display: flex;
     align-items: center;
-    
+
 }
-.drop-icon{
+
+.drop-icon {
     margin-left: 5px;
     font-size: 20px;
     transition: 0.3s;
+    color: white;
 }
+
 .dropdown-content {
     position: absolute;
     background-color: #333;
@@ -52,7 +111,17 @@ nav {
 .dropdown-container:hover .dropdown-content {
     display: block;
 }
-.dropdown-container:hover .drop-icon{
+
+.dropdown-container:hover .dropdown-btn {
+    color: var(--orangeColor);
+}
+
+.dropdown-container:hover .drop-icon {
+    color: var(--orangeColor);
+}
+
+
+.dropdown-container:hover .drop-icon {
     transform: rotate(180deg);
 }
 
@@ -69,5 +138,19 @@ nav {
     background-color: aliceblue;
     color: black;
 }
-
-@keyframes dropdownAnimation {}
+.search-container{
+    background-color: var(--deepDark);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search-container:hover .search-icon{
+    color: var(--orangeColor);
+}
+.search-icon{
+    font-size: 20px;
+    color: white;
+}
