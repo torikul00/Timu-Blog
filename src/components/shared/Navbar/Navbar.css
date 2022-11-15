@@ -27,7 +27,7 @@ nav {}
     text-decoration: none;
     margin-right: 18px;
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 300;
 }
 
 .topbar-container a:hover {
@@ -54,8 +54,10 @@ nav {}
 }
 
 .navlinks {
+
     display: flex;
     align-items: center;
+
 
 }
 
@@ -67,6 +69,7 @@ nav {}
     position: relative;
     display: inline-block;
     padding: 20px 0px;
+    cursor: pointer;
 }
 
 .dropdown-container button {
@@ -138,7 +141,8 @@ nav {}
     background-color: aliceblue;
     color: black;
 }
-.search-container{
+
+.search-container {
     background-color: var(--deepDark);
     width: 30px;
     height: 30px;
@@ -147,10 +151,76 @@ nav {}
     align-items: center;
     cursor: pointer;
 }
-.search-container:hover .search-icon{
+
+.search-container:hover .search-icon {
     color: var(--orangeColor);
 }
-.search-icon{
+
+.search-icon {
     font-size: 20px;
     color: white;
+}
+/* hamburger menu code start from here */
+.burger-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+.hamburger-menu-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: none;
+    background-color: var(--simpleDark);
+  
+    z-index: 999;
+    transition: 0.6s;
+
+}
+
+.open-hamburger-menu {
+    left: 0;
+}
+.close-icon{
+    color: white;
+    font-size: 35px;
+    margin-left: 85%;
+    margin-top: 10px;
+}
+
+/* responsive code start from heres */
+
+@media only screen and (max-width: 600px) {
+
+    .topbar-container {
+        display: none;
+    }
+
+    .dropdown-container {
+        display: none;
+    }
+
+    .navbar-container {
+        padding: 15px 40px;
+    }
+
+    .navlinks {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
+    .hamburger-menu-container {
+        display: block;
+    }
 }
