@@ -1,13 +1,16 @@
 
 import './App.css';
+import useNews from './components/hooks/useNews';
+import Home from './components/pages/Home/Home';
 import Navbar from './components/shared/Navbar/Navbar';
 
 function App() {
 
 
+
   return (
     <>
-  <Navbar />
+      <Home />
 
 
 
