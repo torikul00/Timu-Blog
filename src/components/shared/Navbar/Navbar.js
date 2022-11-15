@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css'
 import { IoIosArrowDown } from 'react-icons/io'
 import { BsFacebook, BsTwitter, BsYoutube, BsPinterest } from 'react-icons/bs'
@@ -7,12 +7,13 @@ import { BiSearchAlt2 } from 'react-icons/bi'
 import { IoCloseSharp } from 'react-icons/io5'
 const Navbar = () => {
 
+    const [isOpen, setIsOpen] = useState(false)
     const openHamburgerMenu = () => {
 
-        document.querySelector('.hamburger-menu-container').classList.add('open-hamburger-menu')
+        setIsOpen(true)
     }
     const closeBurgerIcon = () => {
-        document.querySelector('.hamburger-menu-container').classList.remove('open-hamburger-menu')
+        setIsOpen(false)
     }
     return (
         <>
@@ -85,8 +86,51 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <div className="hamburger-menu-container">
+            <div className={isOpen ? 'open-hamburger-menu ' : 'hamburger-menu-container '}>
                 <IoCloseSharp onClick={closeBurgerIcon} className='close-icon' />
+                <a className='logo' href="/">TIMU</a>
+                <div className="hamburger-dropdown-container">
+                    <div className='btn-arrow'><button className="dropdown-btn">BLOGS</button> <IoIosArrowDown className='drop-icon' /></div>
+                    <div className="dropdown-content">
+                        <a href="">Technology</a>
+                        <a href="">Sports</a>
+                        <a href="">Food</a>
+                        <a href="">Health</a>
+                    </div>
+                </div>
+                <div className="hamburger-dropdown-container">
+                    <div className='btn-arrow'><button className="dropdown-btn">SHOP</button> <IoIosArrowDown className='drop-icon' /></div>
+                    <div className="dropdown-content">
+                        <div className="dropdown-content">
+                            <a href="">Technology</a>
+                            <a href="">Sports</a>
+                            <a href="">Food</a>
+                            <a href="">Health</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="hamburger-dropdown-container">
+                    <div className='btn-arrow'><button className="dropdown-btn">NEWS</button> <IoIosArrowDown className='drop-icon' /></div>
+                    <div className="dropdown-content">
+                        <div className="dropdown-content">
+                            <a href="">Technology</a>
+                            <a href="">Sports</a>
+                            <a href="">Food</a>
+                            <a href="">Health</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="hamburger-dropdown-container">
+                    <div className='btn-arrow'><button className="dropdown-btn">FEATURES</button> <IoIosArrowDown className='drop-icon' /></div>
+                    <div className="dropdown-content">
+                        <div className="dropdown-content">
+                            <a href="">Technology</a>
+                            <a href="">Sports</a>
+                            <a href="">Food</a>
+                            <a href="">Health</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );
