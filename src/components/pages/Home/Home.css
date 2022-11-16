@@ -16,12 +16,19 @@ header {
 .left-container {
     background-color: var(--deepDark);
     position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .left-container img {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    transition: 0.4s;
+
+}
+
+.left-container:hover .left-content-img {
+    transform: scale(1.05);
 }
 
 .left-content {
@@ -32,13 +39,15 @@ header {
     background: linear-gradient(180deg, rgba(33, 34, 34, 0) 0%, rgba(9, 7, 7, 1) 100%);
     bottom: 0;
     padding: 30px 15px;
-    
+
 }
-.left-content h3{
+
+.left-content h3 {
     color: white;
     font-size: 30px;
     word-spacing: 5px;
 }
+
 .right-container {
     background-color: var(--deepDark);
 }
@@ -52,36 +61,91 @@ header {
     width: 100%;
     height: 50%;
     background-color: var(--simpleDark);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.top-container:hover .left-content-img{
+    transform: scale(1.05);
 }
 
 .top-container img {
     width: 100%;
+    height: 100%;
+    transition: 0.4s;
 }
 
 .bottom-container {
     width: 100%;
     display: flex;
     height: 100%;
+    
 }
 
 .bottom-left {
     width: 50%;
     height: 50%;
     background-color: var(--simpleDark);
+    position: relative;
+    overflow: hidden;
 }
-
+.bottom-left:hover .left-content-img{
+    transform: scale(1.05);
+}
 .bottom-left img {
     width: 100%;
     height: 100%;
+    transition: 0.4s;
 }
 
 .bottom-right {
     width: 50%;
     height: 50%;
     background-color: var(--simpleDark);
+    position: relative;
+    overflow: hidden;
 }
-
+.bottom-right:hover .left-content-img{
+    transform: scale(1.05);
+}
 .bottom-right img {
     width: 100%;
     height: 100%;
+    transition: 0.4s;
+}
+
+.pin-button {
+    border: none;
+    background-color: var(--orangeColor);
+    color: white;
+    padding: 3px 5px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.published {
+    color: #c5c5ca;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    word-spacing: 3px;
+}
+
+.right-top-content {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgb(33, 34, 34);
+    background: linear-gradient(180deg, rgba(33, 34, 34, 0) 0%, rgba(9, 7, 7, 1) 100%);
+    bottom: 0;
+    padding: 10px;
+
+}
+
+.right-top-content h3 {
+    color: white;
+    font-size: 15 px;
 }
